@@ -2,7 +2,10 @@
 
 ## Requirements
 
+- Route -> Controller -> UseCase -> Access the DB (DAO, Repository)
+
 - [ ] The user should create an account with email and password
+- - [ ] UseCase UseCreate
 - [ ] The user should update their profile, only their name and picture
 - [ ] The user should authenticate in the account
 - [ ] The user should create a question
@@ -28,6 +31,7 @@ Users
 - userId [uuid, PK]
 - name [varchar(255), not null]
 - email [varchar(255), not null]
+- pictureUrl [varchar(255), nullable]
 - password [text, not null]
 - createdAt [timestamp, default now()]
 - updatedAt [timestamp, null]
