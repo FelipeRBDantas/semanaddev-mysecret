@@ -4,6 +4,7 @@ import cors from 'cors';
 import 'express-async-errors';
 
 import HttpServer from "./HttpServer";
+import UserController from "./controller/UserControllerImpl";
 
 export default class ExpressAdapter implements HttpServer {
   readonly app: express.Application;
@@ -12,6 +13,11 @@ export default class ExpressAdapter implements HttpServer {
     this.app = express();
     this.app.use(cors());
     this.app.use(bodyParser.json());
+
+    const userController = new UserController();
+
+    this.app.use('/api/user', userController.create);
+
     this.app.use('/api', (req, res) => {
       res.json({ message: 'API route My Secret!' });
     });

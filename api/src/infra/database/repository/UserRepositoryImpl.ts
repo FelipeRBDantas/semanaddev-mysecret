@@ -51,6 +51,6 @@ export default class UserRepositoryImpl implements UserRepository {
 
     if (!user) return null;
 
-    return user;
+    return this.toEntity(user);
   }
 }

@@ -1,9 +1,16 @@
 import UserRepository from "@application/repository/UserRepository";
 
 import UserEntity from "@domain/entity/UserEntity";
+import Registry from "@infra/di/Registry";
 
 export default class CreateUser {
-  constructor(readonly userRepository: UserRepository) {}
+  private readonly userRepository: UserRepository;
+
+  constructor() {
+    const registry = Registry.getInstance();
+    
+    this.userRepository = registry.resolve<UserRepository>('UserRepository');
+  }
 
   async execute(userData: InputCreateUser): Promise<OutputCreateUser> {
     const userExist = await this.userRepository.findByEmail(userData.email);
