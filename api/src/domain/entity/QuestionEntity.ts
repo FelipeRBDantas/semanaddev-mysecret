@@ -5,20 +5,20 @@ export default class QuestionEntity {
     readonly questionId: string,
     readonly userId: string,
     readonly question: string,
-    readonly created_at: Date,
-    readonly updated_at: Date | null
+    readonly createdAt: Date,
+    readonly updatedAt: Date | null
   ) {}
 
   static create(userId: string, question: string): QuestionEntity {
     const questionId = UUIDGenerator.generate();
 
-    const created_at = new Date();
+    const createdAt = new Date();
 
     return new QuestionEntity(
       questionId,
       userId,
       question,
-      created_at,
+      createdAt,
       null
     );
   }

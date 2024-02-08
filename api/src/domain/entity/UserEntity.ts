@@ -7,14 +7,14 @@ export default class UserEntity {
     readonly email: string,
     readonly password: string,
     readonly pictureUrl: string | null,
-    readonly created_at: Date,
-    readonly updated_at: Date | null
+    readonly createdAt: Date,
+    readonly updatedAt: Date | null
   ) {}
 
   static create(email: string, password: string): UserEntity {
     const userId = UUIDGenerator.generate();
 
-    const created_at = new Date();
+    const createdAt = new Date();
 
     return new UserEntity(
       userId,
@@ -22,7 +22,7 @@ export default class UserEntity {
       email,
       password,
       null,
-      created_at,
+      createdAt,
       null
     );
   }
