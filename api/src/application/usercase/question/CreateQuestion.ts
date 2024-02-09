@@ -10,7 +10,7 @@ export default class CreateQuestion {
   constructor() {
     const registry = Registry.getInstance();
 
-    this.questionRepository = registry.resolve<QuestionRepository>("QuestionRepository");
+    this.questionRepository = registry.resolve<QuestionRepository>('QuestionRepository');
   }
 
   async execute(questionData: InputCreateQuestion): Promise<OutputCreateQuestion> {
