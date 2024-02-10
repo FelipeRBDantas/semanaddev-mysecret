@@ -1,14 +1,14 @@
 import AnswerRepository from "@application/repository/AnswerRepository";
 
 import AnswerEntity from "@domain/entity/AnswerEntity";
-
 import { AnswerModel } from "@domain/model";
-import AnswerDAO from "../dao/AnswerDAO";
+
+import AnswerDAO from "@infra/database/dao/AnswerDAO";
 
 export default class AnswerRepositoryImpl implements AnswerRepository {
   constructor(private readonly answerDAO: AnswerDAO) {}
 
-  private toModel(answer: AnswerEntity): AnswerEntity {
+  private toModel(answer: AnswerEntity): AnswerModel {
     return {
       answerId: answer.answerId,
       questionId: answer.questionId,

@@ -28,4 +28,18 @@ export default class QuestionDAO implements DAO<QuestionModel> {
 
     return data;
   }
+
+  async list(userId: string): Promise<QuestionModel[]> {
+    const data = await this.connection<QuestionModel>(this.tableName)
+      .where({ userId })
+      .select('*');
+
+    return data;
+  }
+
+  async delete(questionId: string): Promise<void> {
+    await this.connection<QuestionModel>(this.tableName)
+      .where({ questionId })
+      .delete();
+  }
 }

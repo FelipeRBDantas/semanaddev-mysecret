@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 
 import AnswerController from "@application/controller/AnswerController";
+import CreateAnswer from "@application/usercase/answer/CreateAnswer";
 
 export default class AnswerControllerImpl implements AnswerController {
   async create(request: Request, response: Response): Promise<void> {
@@ -8,10 +9,8 @@ export default class AnswerControllerImpl implements AnswerController {
 
     const answerData = { questionId, answer, userId };
 
-    // const newAnswer = await new CreateAnswer().execute(answerData);
+    const newAnswer = await new CreateAnswer().execute(answerData);
 
-    // response.status(201).json(newAnswer);
-
-    response.status(201).json(answerData);
+    response.status(201).json(newAnswer);
   }
 }
