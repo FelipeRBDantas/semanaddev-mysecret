@@ -1,6 +1,6 @@
 export default function MessagesPage() {
   return (
-    <div>
+    <>
       <h1>sua caixa de entrada</h1>
       <ul>
         <li>
@@ -20,6 +20,6 @@ export default function MessagesPage() {
         </li>
       </ul>
       <button>voltar</button>
-    </div>
+    </>
   );
 }

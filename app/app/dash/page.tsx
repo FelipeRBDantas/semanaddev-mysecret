@@ -1,7 +1,7 @@
 export default function DashPage() {
   return (
-    <div>
-      <div>
+    <>
+      <div className="flex flex-col w-full">
         <h1>o que você quer (ou não) saber</h1>
         <p>escolha uma pergunta</p>
         <div>
@@ -12,6 +12,6 @@ export default function DashPage() {
         </div>
       </div>
       <p>toque aqui para gerar o link e copiar</p>
-    </div>
+    </>
   );
 }

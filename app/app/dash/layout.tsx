@@ -1,29 +1,36 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <header>
-        <div className="flex justify-between">
-          <button>Sair</button>
-          <span>Logo</span>
-          <span>Avatar</span>
-        </div>
+    <>
+      <header className="flex w-full justify-between">
+        <button>Sair</button>
+        <span>Logo</span>
+        <span>Avatar</span>
       </header>
-      <nav>
+      <nav className="flex w-full">
         <ul className="flex justify-between">
           <li>
-            <a href="/dash">Perguntas</a>
+            <NavButton href="/dash">home</NavButton>
           </li>
           <li>
-            <a href="/dash/messages">Messages</a>
+            <NavButton href="/dash/messages">messages</NavButton>
           </li>
           <li>
-            <a href="/dash/answers">Respostas</a>
+            <NavButton href="/dash/answers">respostas</NavButton>
           </li>
         </ul>
       </nav>
-      <div className="">
-        { children }
-      </div>
-    </div>
+      { children }
+    </>
+  );
+}
+
+function NavButton({ href, children }: { href: string; children: string }) {
+  return (
+    <a 
+      className="bg-[#D43A72] text-white rounded-[14px] text-[12px] p-3" 
+      href={ href }
+    >
+      { children }
+    </a>
   );
 }
