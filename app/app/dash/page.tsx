@@ -1,14 +1,8 @@
 export default function DashPage() {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <p>perguntas e mensagens anônimas</p>
-      <p>seja bem-vindo!</p>
-      <button>perguntas</button>
-      <button>mensagens</button>
-      <button>respostas</button>
       <div>
-        <p>o que você quer (ou não) saber</p>
+        <h1>o que você quer (ou não) saber</h1>
         <p>escolha uma pergunta</p>
         <div>
           <span>Image</span>
