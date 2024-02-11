@@ -4,15 +4,15 @@
 
 - Route -> Controller -> UseCase -> Access the DB (DAO, Repository)
 
-- [ ] The user should create an account with email and password
-- - [ ] UseCase UseCreate
-- [ ] The user should update their profile, only their name and picture
-- [ ] The user should authenticate in the account
-- [ ] The user should create a question
-- [ ] The user should list questions created
-- [ ] The user should remove create a question
-- [ ] The user should answer questions anonymously
-- [ ] Optionally, the user can answer the question with your information
+- [x] The user should create an account with email and password
+- - [x] UseCase UseCreate
+- [x] The user should update their profile, only their name and picture
+- [x] The user should authenticate in the account
+- [x] The user should create a question
+- [x] The user should list questions created
+- [x] The user should remove create a question
+- [x] The user should answer questions anonymously
+- [x] Optionally, the user can answer the question with your information
 
 ## Database
 
@@ -62,4 +62,22 @@ User (ID, ...)
 
 ## Thunder Client - Tests
 
+### Users - POST (/api/user)
 
+![thunder_client_users_1](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/15caf8ca-6e5f-4613-bb67-8df0c64ebfb2)
+
+### Users - GET (/user/:userId/questions)
+
+![thunder_client_users_2](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/fb5bce1e-6123-45de-95aa-a211adbaebc5)
+
+### Questions - POST (/api/question)
+
+![thunder_client_question_1](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/b56a0796-4fa4-4ab8-a701-9af76134b617)
+
+### Questions - POST (/api/question/:questionId/answers)
+
+![thunder_client_question_2](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/afe9a1dd-7838-48ea-a5e0-89569d7e4eb3)
+
+### Questions - GET (/api/question/:questionId/answers)
+
+![thunder_client_question_3](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/5b6e298d-621f-4835-9d27-bec9be52b436)
