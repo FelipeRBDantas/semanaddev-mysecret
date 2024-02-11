@@ -19,8 +19,8 @@ export default class RouterFactory {
 
     // QuestionController
     router.post('/question', this.questionController.create);
-    router.post('/question/:questionId/answers', this.questionController.create);
-    // router.get('/question/:questionId/answers', this.questionController.create);
+    router.post('/question/:questionId/answers', this.answerController.create);
+    router.get('/question/:questionId/answers', this.answerController.list);
     router.delete('/question', this.questionController.delete);
     
     // UserController
