@@ -1,13 +1,13 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header className="flex w-full justify-between">
+      <header className="flex w-full justify-between mb-4">
         <button>Sair</button>
         <span>Logo</span>
         <span>Avatar</span>
       </header>
-      <nav className="flex w-full">
-        <ul className="flex justify-between">
+      <nav className="flex w-full mb-4">
+        <ul className="flex w-full justify-between">
           <li>
             <NavButton href="/dash">home</NavButton>
           </li>
