@@ -5,8 +5,8 @@ export default function LoginPage() {
       <p>perguntas e mensagens anônimas</p>
       <input type="text" placeholder="informe seu email" />
       <input type="text" placeholder="informe sua senha" />
-      <button className="button">acessar minha conta</button>
-      <button className="button-secondary">voltar</button>
+      <button type="submit" className="button">acessar minha conta</button>
+      <a className="button-secondary">voltar</a>
     </div>
   );
 }
