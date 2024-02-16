@@ -1,5 +1,6 @@
 import Card from "@/app/components/card";
 
+
 export default function AnswersPage() {
   return (
     <>
