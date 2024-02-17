@@ -1,11 +1,13 @@
+import Header from "@/app/components/header";
+
 export default function NewAccountPage() {
   return (
     <>
-      <h1>New Account</h1>
-      <p>perguntas e mensagens anônimas</p>
-      <FormEmail />
-      <FormPassword />
-      <FormProfile />
+      <Header />
+      <h1 className="mb-[60px]">perguntas e mensagens anônimas</h1>
+      <form className="flex flex-col w-full space-y-[15px]">
+        <FormEmail />
+      </form>
     </>
   );
 }
@@ -15,6 +17,7 @@ function FormEmail() {
     <>
       <input type="text" placeholder="informe seu email" />
       <button className="button">continuar</button>
+      <a className="button-secondary">voltar</a>
     </>
   );
 }
