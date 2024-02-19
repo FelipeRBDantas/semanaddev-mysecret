@@ -1,5 +1,7 @@
 # MySecret
 
+![participacao_semanaddev](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/4643da4c-0fc1-4d01-863f-9106fb0fc13c)
+
 ## Requirements
 
 - Route -> Controller -> UseCase -> Access the DB (DAO, Repository)
