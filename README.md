@@ -2,6 +2,10 @@
 
 ![participacao_semanaddev](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/4643da4c-0fc1-4d01-863f-9106fb0fc13c)
 
+## Certificado
+
+![certificado-2024-02-20-fscamp-d2ac734d-2f2a-41a1-b7e7-f4b3b46e32b3](https://github.com/FelipeRBDantas/semanaddev-mysecret/assets/47251032/e923f8b5-f990-487b-bfbc-b6f612d20445)
+
 ## Requirements
 
 - Route -> Controller -> UseCase -> Access the DB (DAO, Repository)
