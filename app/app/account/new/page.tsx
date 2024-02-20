@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import AvatarGenerator from "@/app/components/avatar-generator";
 import Header from "@/app/components/header";
 
 export default function NewAccountPage() {
@@ -53,19 +54,9 @@ function FormProfile({ updateStep }: { updateStep: (action: 'next' | 'back') => 
         <span>@</span>
         <input type="text" placeholder="informe seu usuário" />
       </div>
-      <FormAvatar />
+      <AvatarGenerator />
       <button className="button" type="button" onClick={() => updateStep('next')}>continuar</button>
       <button className="button-secondary" onClick={() => updateStep('back')}>voltar</button>
-    </>
-  );
-}
-
-function FormAvatar() {
-  return (
-    <>
-      <ul>
-        <li>avatar 1</li>
-      </ul>
     </>
   );
 }
